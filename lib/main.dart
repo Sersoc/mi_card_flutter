@@ -16,7 +16,7 @@ class MyWidget extends StatelessWidget {
         body: SafeArea( 
           child: Column(
             // verticalDirection: VerticalDirection.down,
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
               
@@ -47,50 +47,51 @@ class MyWidget extends StatelessWidget {
                   )
 
               ),
-              Container(
-                padding: EdgeInsets.all(10),
+              SizedBox(
+                height: 10,
+                width: 250,
+                child: Divider(
+                  thickness: 5,
+                  color: Colors.white,
+                  
+                  // indent: 10,
+                  // endIndent: 10,
+                  
+                ),
+              ),
+              Card(
+                // padding: EdgeInsets.all(10),
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+                child:ListTile(
+                  leading: Icon(
                       Icons.phone,
                       // size: 100,
                       color: Colors.green,
                       ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
+                      title:          
+                      Text(
                       '010-****-****',
                       style: 
                       TextStyle(
                         fontFamily: 'Source San Pro',
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                      )
-                    ),
-                    
-
-                  ],
-                ),
+                      ),
+                    ),                     
+                ),                                  
               ),
-              Container(
-                padding: EdgeInsets.all(10),
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: 
-                Row(
-                  children: <Widget>[
-                    Icon(
+              
+                Card(
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                  child: ListTile(
+                    leading: Icon(
                       Icons.mail_outline,
                       color: Colors.green,
                       
                       ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
+                      title: Text(
                         '****@qq.com',
                         style: 
                         TextStyle(
@@ -99,14 +100,13 @@ class MyWidget extends StatelessWidget {
                           fontWeight: FontWeight.bold,
 
                         ),
-                        
                       ),
-                  ],
-                ),
-              )
-            ],
+                  ),
+                ), 
+               
+            ],  
           ),
-        )
+        ),
         
       ),
     );
